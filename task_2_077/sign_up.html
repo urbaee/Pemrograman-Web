@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/V4.png" alt="logo">
+            <h1>ViskyAi</h1>
+        </div>
+        <table>
+            <tr>
+                <th class="col-width1"><p>"Setiap kali aku melihat langit biru, aku merasa seperti ada harapan baru di depan."</p></th>
+                <th class="col-width2"><a href="#" target="_blank" class="text">Home</a></th>
+            </tr>
+        </table>
+    </nav>
+    <div class="container">
+        <h1>ViskyAi</h1>
+        <div class="box">
+            <h2>Sign Up</h2>
+            <hr>
+            <!-- saat ini menggunakan action https://httpbin.org/post karena html tidak bisa menerima post tanpa adanya backend, sehingga ini menghasilkans http error. -->
+            <!-- sebagai gantinya, menggunakan https://httpbin.org/post untuk melihat data query yang berhasil dikirim. -->
+            <form action="https://httpbin.org/post" method="POST">  
+                <label for="name">Full Name</label><br>
+                <input type="text" name="name" id="name" placeholder="name" required><br>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" placeholder="Username" required><br>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" placeholder="Password" required><br>
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br>
+                <label for="city">City</label><br>
+                <input type="text" name="city" id="city" placeholder="City" required><br>
+                <label for="bio">Biodata</label>
+                <input type="text" name="bio" id="bio" placeholder="Masukkan biodata singkat Anda" required maxlength="30"><br>
+                <button type="submit"><a href="profile.html" target="_blank">SIGN UP</a></button>
+                <!-- klik container button untuk melihat data query yang berhasil dikirim. -->
+                 <!-- klik teks signup untuk pergi ke page profile -->
+            </form>
+        </div>
+    </div>
+</body>
+</html>
